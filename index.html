@@ -65,7 +65,8 @@
 												data-callback="onSubmit" data-size="invisible"></div>
 										</div>
 
-										<button type="submit" class="btn text-white btn-lg bg-primary btn-block">Make an
+										<button id="submit-button" type="submit"
+											class="btn text-white btn-lg bg-primary btn-block">Make an
 											offer</button>
 									</form>
 								</div>
@@ -135,6 +136,7 @@
 				Pageclip.send('pdlk4sCVDJkXXz4AHLzugkiExSGxtbmV', 'offer-form', data, function (error, response) {
 					console.log('saved?', !!error, '; response:', error || response);
 				});
+				$("#submit-button")[0].innerHTML = "submitted";
 			}
 		});
 	</script>
